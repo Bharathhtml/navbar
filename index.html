@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <style>
+    .list {
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: dimgray;
+      padding: 5px;
+    }
+    .list li {
+      font-size: 20px;
+      color: orange;
+      padding: 2px;
+      cursor: pointer;
+      position: relative;
+    }
+    .bar {
+      position: absolute;
+      left: -50px;
+      top: 32px;
+      list-style-type: none;
+      text-align: center;
+    }
+    .bar li {
+      padding: 10px;
+      background-color: gray;
+      text-decoration: underline;
+    }
+    .two {
+      cursor: pointer;
+    }
+    .pencil {
+      position: relative;
+    }
+    .nav {
+      position: absolute;
+      left: 50px;
+    }
+    .nav li {
+      list-style-type: none;
+    }
+    .textbook{
+        position: relative;
+    }
+    .bharath{
+        position: absolute;
+    }
+    .bharath li{
+        margin-left: 41px;
+    }
+  </style>
+  <body>
+    <ul class="list">
+      <li>home</li>
+      <li class="two">
+        services
+        <ul class="bar">
+          <li>pen</li>
+
+          <li class="pencil">
+            pencil
+            <ul class="nav">
+              <li>apasara</li>
+              <li>natraj</li>
+              <li>compass</li>
+
+              <li class="textbook">
+                textbook
+                <ul class="bharath">
+                  <li>history</li>
+                  <li>english</li>
+                  <li>tamil</li>
+                  <li>telugu</li>
+                  <li>hindi</li>
+                </ul>
+              </li>
+
+              <li>graph</li>
+            </ul>
+          </li>
+
+          <li>rubber</li>
+          <li>book</li>
+          <li>compass</li>
+        </ul>
+      </li>
+      <li>number</li>
+      <li>cost</li>
+      <li>amount</li>
+    </ul>
+    <script>
+      $(".bar").hide();
+
+      $(document).ready(function () {
+        $(".two").click(function () {
+          $(".bar").slideDown();
+        });
+      });
+      $(".nav").hide();
+      $(document).ready(function () {
+        $(".pencil").click(function () {
+          $(".nav").show();
+        });
+      });
+      $(".bharath").hide()
+      $(document).ready(function(){
+        $(".textbook").click(function(){
+            $(".bharath").slideDown()
+        })
+      })
+
+    </script>
+  </body>
+</html>
